@@ -1,0 +1,68 @@
+.skillbar {
+  height: 10vh;
+  margin-top: 0vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  z-index: 3;
+}
+  
+.skillsContainer {
+  margin-left: 10vw;
+  margin-right: 5vw;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  column-count: 2;
+  column-gap: 5vw;
+}
+  
+.skillbar .options {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.skillbar .options:hover {
+  cursor: pointer;
+  color: #43fbfd;
+}
+
+.skillbar .select {
+  font-weight: 800;
+  color: #43fbfd;
+  filter: blur(0.2px);
+}
+
+* {
+  box-sizing: border-box;
+}
+  
+  /* Create two equal columns that floats next to each other */
+.skills-column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.single-column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+  
+/* Clear floats after the columns */
+.skills-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
