@@ -64,7 +64,6 @@ function App() {
           Fade("page8Title", -360);
           FadeAcross("socialContainer", -300);
           FadeAcross("submitForm", -500);
-          FadeAcross("submitButton", 500);
         } else if (className === "panel ninth-panel") {
           let tl = gsap.timeline();
           tl.to(".backgroundTitle-9", {x: 800, y: 800, duration: 0})

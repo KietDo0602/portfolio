@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as THREE from "three";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import image from '../assets/black_white_earth_uv_map.png';
+import image from '../assets/black_white_earth_uv_map.jpg';
 
 export default class ModelCanvas extends Component {
   constructor(props) {
