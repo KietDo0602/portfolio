@@ -46,6 +46,10 @@
   text-align: center;
 }
 
+.skills-row h3 {
+  font-size: 2vw;
+}
+
 .single-column {
   float: left;
   width: 100%;

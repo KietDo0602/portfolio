@@ -146,6 +146,7 @@ section:not(.first) {
   top: 50vh;
   left: 30vw;
   display: block;
+  font-size: 1.9vw;
 }
 
 .panel .pageTitle {

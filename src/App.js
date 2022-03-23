@@ -50,7 +50,6 @@ function App() {
           FadeAcross("SkillsBarContainer", 500);
         } else if (className === "panel fourth-panel") {
           FadeAcross("backgroundTitle-4", -200);
-          Fade("center-button", -220);
         } else if (className === "panel fifth-panel") {
           Translate("page5TitleSpan", 100);
           FadeAcross("row1", -200);
