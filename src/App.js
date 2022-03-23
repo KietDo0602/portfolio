@@ -189,7 +189,9 @@ function App() {
       {/* Fourth Page */}
       <section class="panel fourth-panel">
         <h1 className="backgroundTitle-4">RESUME</h1>
-        <div className="center-button">
+        <div className="center-button" onClick={()=> {
+            window.open("https://firebasestorage.googleapis.com/v0/b/kietdo-580f0.appspot.com/o/Resume123.pdf?alt=media&token=e6eabc0e-a04e-40e0-84fb-ea05f5c1cca1", "resume");
+          }}>
           <div className="resumeButton"><p className="inline-border">RESUME.DOWNLOAD()</p></div>
         </div>
       </section>
