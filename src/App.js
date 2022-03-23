@@ -62,8 +62,15 @@ function App() {
           Fade("page7Title", -360);
         } else if (className === "panel eighth-panel") {
           Fade("page8Title", -360);
-          FadeAcross("socialContainer", -300);
-          FadeAcross("submitForm", -500);
+          // FadeAcross("socialContainer", -300);
+          let tl = gsap.timeline();
+          tl.to(".github", {x: -1000, duration: 0})
+          .to(".mail", {y: 1000, duration: 0})
+          .to(".linkedin", {x: 1000, duration: 0})
+          .to(".github", {x: 0, duration: 0.8})
+          .to(".mail", {y: 0, duration: 0.8})
+          .to(".linkedin", {x: 0, duration: 0.8})
+          
         } else if (className === "panel ninth-panel") {
           let tl = gsap.timeline();
           tl.to(".backgroundTitle-9", {x: 800, y: 800, duration: 0})
@@ -119,7 +126,6 @@ function App() {
         ease: CustomEase.create("custom", "M0,0 C0.77,0 0.175,1 1,1 ")
       });
     }
-
     
   });
 
@@ -275,7 +281,7 @@ function App() {
           <a href="mailto:kietdo0602@gmail.com"><img className="socialsButton mail" src={mail} alt="mail-icon"/></a>
           <a href="https://www.linkedin.com/in/kietdo/"><img className="socialsButton linkedin" src={linkedin} alt="linkedin-icon"/></a>
         </div>
-        <div className="divideLineLeft"></div>
+        {/* <div className="divideLineLeft"></div>
         <div className="divideLineRight"></div>
         <h1 className="or">OR</h1>
         <div className="submitForm">
@@ -283,7 +289,7 @@ function App() {
           <input className="emailField textField" type="email" id="email" name="email" placeholder="Email" />
           <textarea className="messageField" id="message" name="message" placeholder="Message" maxlength="5000"/>
         </div>
-        <div className="submitButton">SUBMIT</div>
+        <div className="buttonContainer"><div className="submitButton">SUBMIT</div></div> */}
       </section>
 
       {/* Ninth Page */}

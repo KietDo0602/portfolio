@@ -437,8 +437,9 @@ section:not(.first) {
   height: 20vh;
   width: 60vw;
   text-align: center;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
 }
 
 .socialsButton {
@@ -485,13 +486,14 @@ section:not(.first) {
   height: 12vh;
   margin-top: 4vh;
   transition-duration: 0.7s;
+  transform: scale(0.85);
   transition-property: transform;
 }
 
 .linkedin:hover {
   cursor: pointer;
   filter: invert(94%) sepia(78%) saturate(1571%) hue-rotate(139deg) brightness(105%) contrast(106%);
-  transform: translateY(-30px);
+  transform: translateY(-30px) scale(0.85);
 }
 
 .divideLineLeft {
@@ -572,11 +574,6 @@ section:not(.first) {
 }
 
 .submitButton {
-  width: 10vw;
-  height: 33vh;
-  position: absolute;
-  top: 57vh;
-  right: 10vw;
   background-color: white;
   border: 5px solid black;
   color: black;
@@ -586,6 +583,14 @@ section:not(.first) {
   transition-duration: 0.5s;
   transition-property: background-color color transform;
   line-height: 33vh;
+}
+
+.buttonContainer {
+  width: 10vw;
+  height: 33vh;
+  position: absolute;
+  top: 57vh;
+  right: 10vw;
 }
 
 .submitButton:hover {
