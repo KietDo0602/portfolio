@@ -1,0 +1,14 @@
+.loader {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    text-align: center;
+    background-color: white;
+}
+
+.tailSpin {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

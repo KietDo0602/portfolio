@@ -271,7 +271,8 @@ section:not(.first) {
   -webkit-user-select: none;         
   -moz-user-select: none; 
   -ms-user-select: none;
-  user-select: none; 
+  user-select: none;
+  transition: all 0.2s linear;
 }
 
 .page5 {
@@ -696,7 +697,5 @@ section:not(.first) {
   -moz-user-select: none; 
   -ms-user-select: none;
   user-select: none; 
-  /* filter: blur(0.5px); */
-  /* -webkit-filter: blur(2px); */
-
+  transition: all 0.2s linear;
 }
