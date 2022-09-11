@@ -313,7 +313,7 @@ function Home() {
               </Link>
               <div className="projectDesc">
                 <h1>ADVANCED CAPTCHA</h1>
-                <p>Personalized and version of Google's Catpcha</p>
+                <p>A unique take on conventional Catpchas</p>
                 <p>Status: Work In Progress</p>
               </div>
             </div>
