@@ -1,0 +1,39 @@
+.notFoundPage {
+    background-color: white;
+    height: 100vh;
+}
+
+.notFoundContainer {
+    height: 50vh;
+    width: 50vw;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notFoundPage h1 {
+    color: #8c8c8c;
+    text-align: center;
+    font-size: 8vw;
+    text-shadow: 3px 3px #808080
+}
+
+.notFoundPage p {
+    text-align: center;
+    font-size: 1.5em;
+    color: #737373;
+}
+
+.notFoundPage p:hover {
+    color: #c8c8c8;
+}
+                
+.notFoundPage h2 {
+  font-size: 0.5em;
+}
+
+.notFoundContainer a {
+    text-decoration: none;
+}

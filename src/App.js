@@ -1,28 +1,22 @@
-import React, {useEffect, useState, Suspense, lazy} from 'react';
-import { gsap, ScrollTrigger, CustomEase } from "gsap/all";
-import './App.css';
-import EarthModel from './Components/EarthModel';
-import SkillsBar from './Components/SkillsBar';
-import Draggable from 'react-draggable'
-import { default as mail } from './assets/mail.svg';
-import { default as github } from './assets/github-icon.svg';
-import { default as linkedin } from './assets/linked-in-icon.svg';
-import Loader from './Components/Loader';
-// import Home from './Home';
-const Home = lazy(() => {
-  return Promise.all([
-    import("./Home"),
-    new Promise(resolve => setTimeout(resolve, 600))
-  ])
-  .then(([moduleExports]) => moduleExports);
-});
+import React, {useEffect, useRef} from 'react';
+import Home from './Home';
+import NotFoundPage from './NotFoundPage';
+import ResumePage from './ResumePage';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Projects from './Projects';
 
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<Loader/>}>
-        <Home />
-      </Suspense>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/all-projects" element={<Projects/>} title="Projects"/>
+          <Route exact path="/files/resume.pdf" element={<ResumePage />} title="Resume"/>
+          <Route path="/404" element={<NotFoundPage />} title="Error"/>
+          <Route path="*" element={<NotFoundPage />} title="Error"/>
+        </Routes>
+    </Router>
     </div>
   );
 }
