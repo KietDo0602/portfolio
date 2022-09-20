@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const resumeURL = "https://firebasestorage.googleapis.com/v0/b/kietdo-580f0.appspot.com/o/resume.pdf?alt=media&token=16620916-df1a-45f0-9476-b0486cdf4e0b";
+const resumeURL = "https://firebasestorage.googleapis.com/v0/b/kietdo-580f0.appspot.com/o/Official%20Resume.pdf?alt=media&token=31a893fd-5723-442d-8df5-59691a09bb78";
 
 const ResumePage = () => {
     useEffect(() => {

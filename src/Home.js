@@ -52,7 +52,7 @@ function Home() {
         end: "bottom top",
         pin: mainPageContainerRef.current,
         // markers: true,
-        scrub: 0
+        scrub: 0.7
       },
       y: "100%",
     })
@@ -62,7 +62,7 @@ function Home() {
   // About Page Scroll Logic
   useEffect(() => {
     let startXCoord = 90;
-    let st = ScrollTrigger.create({
+    ScrollTrigger.create({
       trigger: aboutPageRef.current,
       pin: titleContainerRef.current,
       start: "top 70vh",
@@ -95,6 +95,7 @@ function Home() {
       start: "top top",
       end: "bottom bottom",
     });
+
     ScrollTrigger.create({
       trigger: skillPage1Ref.current,
       start: "50px 200px",
@@ -182,12 +183,11 @@ function Home() {
   // On Page Load after everything else have loaded
   useEffect(() => {
     disableScroll();
-    // gsap.set(mainPageTitleRef.current, {yPercent: -100});
     var tl = gsap.timeline();
     tl.to(loaderRef.current, {animationPlayState: "paused", duration: 0, delay: 1.6})
     .to(coverRef.current, {yPercent: -120, duration: 1.9, ease: "slow(0.7, 0.7, false)", visibility: "none"})
-    // .to(mainPageTitleRef.current, {yPercent: 0, duration: 1, ease: "bounce.out"})
-    .call(enableScroll)
+    .call(enableScroll);
+    ScrollTrigger.refresh();
   }, []);
 
 
@@ -200,6 +200,7 @@ function Home() {
       </div>
       {open ? <CustomChatBot chat={chat}/> : null}
       <div className={'chatBotButton ' + (chat ? ' selected' : 'unselected')} ref={chatBotRef} onClick={() => {setChat(!chat); setOpen(true)}}></div>
+      
       {/* Title Page */}
       <section className="titlePage panel" ref={titlePageRef}>
         <div>
@@ -306,15 +307,15 @@ function Home() {
           <div className="project_column">
             <h1 className="projectTitle">SELECTED PROJECTS</h1>
             <div className="project first-project transform">
-              <Link to="/">
+              <Link to="/kaptcha">
                 <div className="projectImage">
-                  {/* <img className="projectImageSrc" src="https://www.datamation.com/wp-content/uploads/2021/10/artificial-intelligence-g48cb9bf7d_1920.jpg" alt="Project"/> */}
+                  <img className="projectImageSrc" src="https://firebasestorage.googleapis.com/v0/b/kietdo-580f0.appspot.com/o/KaptchaProject.jpg?alt=media&token=39c438b9-9f7c-494f-8070-c05f38c8e3c2" alt="Project"/>
                 </div>
               </Link>
               <div className="projectDesc">
-                <h1>ADVANCED CAPTCHA</h1>
-                <p>A unique take on conventional Catpchas</p>
-                <p>Status: Work In Progress</p>
+                <h1>KAPTCHA</h1>
+                <p>A unique take on Catpchas...</p>
+                <p>Status: Finished</p>
               </div>
             </div>
             <div className="project transform">
