@@ -67,24 +67,34 @@ function Home() {
       pin: titleContainerRef.current,
       start: "top 70vh",
       end: "bottom 90%",
+      // markers: true,
     });
-    for (let i = 1; i < 8; ++i) {
-      gsap.set(`.aboutPageDesc${i}`, { 
-        xPercent: (i % 2 === 1 ? startXCoord: -startXCoord),
-        color: "white"
-      });
-      gsap.to(`.aboutPageDesc${i}`, {
-        scrollTrigger: {
-          trigger: aboutPageRef.current,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 0.7,
-          // markers: true,
-        },
-        xPercent: (i % 2 === 1 ? -10: 10),
-        color: "black"
-      })
-    }
+    gsap.set(`.odd-desc`, { 
+      xPercent: startXCoord,
+    });
+    gsap.set(`.even-desc`, { 
+      xPercent: -startXCoord,
+    });
+    gsap.to(`.odd-desc`, {
+      scrollTrigger: {
+        trigger: aboutPageRef.current,
+        start: "top 10%",
+        end: "bottom 95%",
+        scrub: 0.3,
+        // markers: true,
+      },
+      xPercent: -10,
+    })
+    gsap.to(`.even-desc`, {
+      scrollTrigger: {
+        trigger: aboutPageRef.current,
+        start: "top 10%",
+        end: "bottom 95%",
+        scrub: 0.3,
+        // markers: true,
+      },
+      xPercent: 10,
+    })
   }, []);
 
   // Skill Page Scroll Logic
@@ -212,13 +222,13 @@ function Home() {
       <section className="aboutPage normal-panel" ref={aboutPageRef}>
         <div className="titleContainer" ref={titleContainerRef}>
           <div className="center">
-            <h1 className="mediumFontSize hidden aboutPageDesc1">I'M <span className="bold">KIET</span>!</h1>
-            <h1 className="largeFontSize hidden aboutPageDesc2">ABOUT ME</h1>
-            <h1 className="smallFontSize bottomParagraph aboutPageDesc3">WEB DEVELOPER BASED IN <strong>WATERLOO</strong></h1>
-            <h1 className="smallFontSize bottomParagraph aboutPageDesc4">ENJOYS BIG TALKS AND TRAINS 🚂</h1>
-            <h1 className="smallFontSize bottomParagraph aboutPageDesc5">PASSIONATE, LAID BACK</h1>
-            <h1 className="smallFontSize bottomParagraph aboutPageDesc6">EXCITED TO LEARN NEW TECHNOLOGIES</h1>
-            <h1 className="smallFontSize bottomParagraph aboutPageDesc7">ALWAYS OPEN TO CRITICISMS</h1>
+            <h1 className="mediumFontSize hidden aboutPageDesc1 odd-desc">I'M <span className="bold">KIET</span>!</h1>
+            <h1 className="largeFontSize hidden aboutPageDesc2 even-desc">ABOUT ME</h1>
+            <h1 className="smallFontSize bottomParagraph aboutPageDesc3 odd-desc">WEB DEVELOPER BASED IN <strong>WATERLOO</strong></h1>
+            <h1 className="smallFontSize bottomParagraph aboutPageDesc4 even-desc">ENJOYS BIG TALKS AND TRAINS 🚂</h1>
+            <h1 className="smallFontSize bottomParagraph aboutPageDesc5 odd-desc">PASSIONATE, LAID BACK</h1>
+            <h1 className="smallFontSize bottomParagraph aboutPageDesc6 even-desc">EXCITED TO LEARN NEW TECHNOLOGIES</h1>
+            <h1 className="smallFontSize bottomParagraph aboutPageDesc7 odd-desc">ALWAYS OPEN TO CRITICISMS</h1>
           </div>
         </div>
       </section>
@@ -253,7 +263,7 @@ function Home() {
                 <h1 className="skillFont">REACT</h1>
                 <h1 className="skillFont">NODE.JS</h1>
                 <h1 className="skillFont">EXPRESS.JS</h1>
-                <h1 className="skillFont">JAVA SPRING</h1>
+                <h1 className="skillFont">SPRING</h1>
                 <h1 className="skillFont">REDUX</h1>
                 <h1 className="skillFont">REDIS</h1>
                 <h1 className="skillFont">GRAPHQL</h1>

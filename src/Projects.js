@@ -1,9 +1,9 @@
 import React, {useState, useRef, useEffect} from 'react';
 import './Projects.css';
-import { data } from './data/ProjectData';
+import { allProjectData } from './data/ProjectData';
 import LazyImage from './components/LazyImage';
 import {disableScroll, enableScroll} from './components/Scroll';
-import { gsap } from "gsap/all";
+import { gsap, ScrollTrigger } from "gsap/all";
 
 
 function Projects() {
@@ -21,8 +21,16 @@ function Projects() {
 
 
     useEffect(() => {
+        gsap.killTweensOf(window);
         window.scrollTo(0, 0);
         document.title="Kiet's Project";
+        return () => {
+            ScrollTrigger.getAll().forEach((instance) => {
+              instance.kill();
+            });
+            // This in case a scroll animation is active while the route is updated
+            gsap.killTweensOf(window);
+          };
     }, [])
 
     useEffect(() => {
@@ -104,14 +112,14 @@ function Projects() {
                         <p onClick={() => setSoftware(!software)} className={(software ? 'software' : '')}>SOFTWARE</p>
                     </div>
                 </div>
-                <div className="container">
-                    {data.filter(TagFilter).filter(SearchFilter).filter(TypeFilter).map((item) =>
+                <div className="proj-container">
+                    {allProjectData.filter(TagFilter).filter(SearchFilter).filter(TypeFilter).map((item) =>
                         <a className="link" href={item.href}>
-                            <div className={"tile " + (item.type + '-shadow')}>
-                                <LazyImage className="image" src={item.img}/>
+                            <div className={"tile"}>
+                                <LazyImage className="proj-image" src={item.img}/>
                                 <div className={"bottom-container" + (item.pride ? " pride" : '')}>
                                     <h1 className="projectName">{item.name}</h1>
-                                    <h1 className="projectDesc">
+                                    <h1 className={"projectDesc " + (item.type + '-desc')}>
                                         {item.desc}
                                     </h1>
                                     <h1 className="tag">{item.state.toUpperCase()}</h1>

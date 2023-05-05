@@ -1,4 +1,4 @@
-export const data = [
+export const allProjectData = [
   {
     id: 1,
     name: "⭐ PERSONAL WEBSITE",

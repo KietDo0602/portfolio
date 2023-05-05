@@ -585,7 +585,7 @@ body {
 }
 
 .skillTextContainer {
-  margin: 0;
+  margin: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -593,16 +593,25 @@ body {
   line-height: 60px;
 }
 
+.skillTextContainer .skillFont {
+  margin: 10px;
+}
+
+.backendSKills .skillFont {
+  margin: 20px;
+}
+
 .titleContainer {
   position: relative;
   height: 80vh;
   width: 100vw;
+  margin: 10px 20px 30px 40px;
+  text-align: center;
 }
 
 div .bold {
   font-weight: bolder;
 }
-
 
 .descriptionContainer {
   position: absolute;

@@ -1,6 +1,5 @@
 import './Kaptcha.css';
 import React, { useEffect } from 'react';
-import {Link} from 'react-router-dom';
 import Captcha from './components/Captcha';
   
 

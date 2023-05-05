@@ -22,7 +22,7 @@ function TableFooter(props, ref) {
     return (
       <div className="footer" ref={ref}>
         <div className="row">
-          <a href="mailto:kietdo0602@gmail.com"><FontAwesomeIcon className="socialIcon" icon={faEnvelope}/></a>
+          <a href="mailto:career@kietdo.io"><FontAwesomeIcon className="socialIcon" icon={faEnvelope}/></a>
           <a href="https://www.linkedin.com/in/kietdo/"><FontAwesomeIcon className="socialIcon" icon={faLinkedin}/></a>
           <a href="https://github.com/kietdo0602"><FontAwesomeIcon className="socialIcon" icon={faGithub}/></a>
         </div>
@@ -30,7 +30,7 @@ function TableFooter(props, ref) {
         <div className="row">
           <ul>
             {weather ? <li>{`${Math.floor(weather.main.temp - 273.15)}°C ${weather.weather[0].main}, Waterloo, Ontario`}</li> : null}
-            <li><a href="mailto:kietdo0602@gmail.com">Contact Me</a></li>
+            <li><a href="mailto:career@kietdo.io">Contact Me</a></li>
             <li><a href="/">My Projects</a></li>
           </ul>
         </div>
