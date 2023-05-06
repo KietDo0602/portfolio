@@ -317,11 +317,11 @@ function Home() {
           <div className="project_column">
             <h1 className="projectTitle">SELECTED PROJECTS</h1>
             <div className="project first-project transform">
-              <Link to="/kaptcha">
+              <a href="https://kaptcha.kietdo.io">
                 <div className="projectImage">
                   <img className="projectImageSrc" src="https://firebasestorage.googleapis.com/v0/b/kietdo-580f0.appspot.com/o/KaptchaProject.jpg?alt=media&token=39c438b9-9f7c-494f-8070-c05f38c8e3c2" alt="Project"/>
                 </div>
-              </Link>
+              </a>
               <div className="projectDesc">
                 <h1>KAPTCHA</h1>
                 <p>A unique take on Catpchas...</p>

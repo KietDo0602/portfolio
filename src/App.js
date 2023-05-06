@@ -1,10 +1,9 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import Home from './Home';
 import NotFoundPage from './NotFoundPage';
 import ResumePage from './ResumePage';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Projects from './Projects';
-import KaptchaPage from './Kaptcha';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/all-projects" element={<Projects/>} title="Projects"/>
-          <Route path="/kaptcha" element={<KaptchaPage />} title="Kaptcha"/>
           <Route exact path="/files/resume.pdf" element={<ResumePage />} title="Resume"/>
           <Route path="/404" element={<NotFoundPage />} title="Error"/>
           <Route path="*" element={<Navigate to="/404" replace />} />
