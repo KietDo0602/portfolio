@@ -1,6 +1,8 @@
 # Portofolio / Personal Website
 
-Coded from scratch.
+[Live Website](https://www.kietdo.io)
+
+Coded from scratch. No Templates.
 
 ## Library Used
 - React
@@ -10,7 +12,7 @@ Coded from scratch.
 - React-Simple-ChatBot
 
 ## Copyright
-Copyright-free. Use freely, but credits are always nice.
+Copyright-free. Use freely, but credits can be nice.
 
 ## Available Scripts
 
