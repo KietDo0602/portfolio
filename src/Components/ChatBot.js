@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import ChatBot from 'react-simple-chatbot';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +18,7 @@ const theme = {
 };
 
 function getAge(dateString) {
+  console.log(process.env);
   var today = new Date();
   var birthDate = new Date(dateString);
   var age = today.getFullYear() - birthDate.getFullYear();

@@ -10,7 +10,7 @@ export const allProjectData = [
   },
   {
     id: 2,
-    name: "🤖 CAPTCHA",
+    name: "🤖 KAPTCHA",
     state: "starting",
     type: "back",
     img: "https://firebasestorage.googleapis.com/v0/b/kietdo-580f0.appspot.com/o/placeholder-image.png?alt=media&token=46ac7889-fff0-4f98-a2c2-ba97c4b314ad",
