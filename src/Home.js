@@ -214,7 +214,7 @@ function Home() {
       {/* Title Page */}
       <section className="titlePage panel" ref={titlePageRef}>
         <div>
-          <h1 className="largeFontSize hidden mainPageTitle" ref={mainPageContainerRef}><span className="titleSpan" ref={mainPageTitleRef}>kiet</span></h1>
+          <h1 className="largeFontSize hidden mainPageTitle" ref={mainPageContainerRef}><span className="titleSpan" ref={mainPageTitleRef}>KIET DO</span></h1>
         </div>
       </section>
 
@@ -225,8 +225,8 @@ function Home() {
             <h1 className="mediumFontSize hidden aboutPageDesc1 odd-desc">I'M <span className="bold">KIET</span>!</h1>
             <h1 className="largeFontSize hidden aboutPageDesc2 even-desc">ABOUT ME</h1>
             <h1 className="smallFontSize bottomParagraph aboutPageDesc3 odd-desc">WEB DEVELOPER BASED IN <strong>WATERLOO</strong></h1>
-            <h1 className="smallFontSize bottomParagraph aboutPageDesc4 even-desc">ENJOYS BIG TALKS AND TRAINS 🚂</h1>
-            <h1 className="smallFontSize bottomParagraph aboutPageDesc5 odd-desc">PASSIONATE, LAID BACK</h1>
+            <h1 className="smallFontSize bottomParagraph aboutPageDesc4 even-desc">ENJOYS TECH AND TRAINS 🚂</h1>
+            <h1 className="smallFontSize bottomParagraph aboutPageDesc5 odd-desc">PASSIONATE, LAID BACK, ATTENTION TO DETAIL</h1>
             <h1 className="smallFontSize bottomParagraph aboutPageDesc6 even-desc">EXCITED TO LEARN NEW TECHNOLOGIES</h1>
             <h1 className="smallFontSize bottomParagraph aboutPageDesc7 odd-desc">ALWAYS OPEN TO CRITICISMS</h1>
           </div>
@@ -249,6 +249,7 @@ function Home() {
               <h1 className="skillFont">CSS</h1>
               <h1 className="skillFont">JAVASCRIPT</h1>
               <h1 className="skillFont">REACT</h1>
+              <h1 className="skillFont">ANGULAR</h1>
               <h1 className="skillFont">BOOTSTRAP</h1>
               <h1 className="skillFont">MATERIAL UI</h1>
               <h1 className="skillFont">GSAP</h1>
@@ -260,7 +261,7 @@ function Home() {
           <div className="backendSKills">
             <div className="double-left">
               <div className="middle">
-                <h1 className="skillFont">REACT</h1>
+                <h1 className="skillFont">DJANGO</h1>
                 <h1 className="skillFont">NODE.JS</h1>
                 <h1 className="skillFont">EXPRESS.JS</h1>
                 <h1 className="skillFont">SPRING</h1>
@@ -276,6 +277,7 @@ function Home() {
                 <h1 className="skillFont">HEROKU</h1>
                 <h1 className="skillFont">AWS</h1>
                 <h1 className="skillFont">MYSQL</h1>
+                <h1 className="skillFont">SSQL</h1>
                 <h1 className="skillFont">NO-SQL</h1>
                 <h1 className="skillFont">CLI</h1>
                 <h1 className="skillFont">NPM</h1>
