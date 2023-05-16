@@ -4,7 +4,7 @@ const resumeURL = "https://firebasestorage.googleapis.com/v0/b/kietdo-580f0.apps
 
 const ResumePage = () => {
     useEffect(() => {
-        document.title="Kiet's Resume";
+        document.title="Kiet Do's Resume";
     })
     return (<>
     <style>
